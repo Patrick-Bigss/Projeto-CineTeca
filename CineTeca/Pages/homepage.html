@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - CineTeca</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href= "https://previews.123rf.com/images/muslumstock/muslumstock1808/muslumstock180806405/107874508-video-camera-vector-icon-isolated-on-transparent-background-video-camera-logo-concept.jpg">
+       <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+       <!-- Topo do site-- -->
+        <main>
+            <header class="text-center py-1">
+        
+                <div class="container col-md-10">
+
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="Cadastro.html" class="nav-link px-2">Cadastrar Usuário</a></li>
+                <li><a href="BuscarFilmes.html" class="nav-link px-2">Biblioteca de Filmes</a></li>
+                <li><a href="Avaliacoes.html" class="nav-link px-2">Avalie os Filmes</a></li>
+            </ul>
+
+             <a href="BuscarFilmes.html" class="btn btn-primary  mt-3" >Começar Agora</a>
+                
+               <h1 class="display-4"> Bem-vindo ao CineTeca</h1>
+                <p class="lead"> Pesquise filmes ou séries, descubra novas obras e registre suas avaliações.</p>
+                <form>
+                        <label class="form-label" for="nome"> Digite o nome do filme:</label>
+                        <input class="form-control" type="text" id="nome" placeholder="Ex.: Titanic">  
+
+                        <button
+                            type="button" class="btn btn-primary mt-3" onclick="ImprimirNome()">Buscar
+                        </button>
+                
+                    <script src="BuscarFilme.js"></script>
+        
+                </form>
+</div>
+</header>
+</main>
+</body>
+</html>
