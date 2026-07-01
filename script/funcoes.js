@@ -11,6 +11,8 @@ Tratamento de Exceções: Captura de erros de requisição caso o
 título não seja encontrado ou a chave da API atinja o limite. 
 Tratar o retorno vazio de forma graciosa.
 
+
+
 patrick
 Formulários: Sistema de avaliação do filme selecionado, onde o usuário 
 insere uma nota (1 a 5 estrelas) e escreve uma crítica/resenha.
@@ -29,3 +31,19 @@ Estrutura de Páginas:
 2.Página de Avaliações (Exibição do catálogo pessoal do usuário).
 
 */
+
+let chave = "ae81a959";
+let titulo = "Matrix";
+fetch(`http://www.omdbapi.com/?apikey=${chave}&t=${titulo}`)
+    .then(function(resposta){
+        return resposta.json();            
+    })
+    .then(function(dados){
+        if(dados.erro){
+            alert("Titulo não encontrado");
+            return;
+        }
+        console.log("Titulo: ", dados.Title);
+        console.log("Ano: ", dados.Year);
+        console.log("Writer: ", dados.Writer);
+    })
