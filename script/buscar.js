@@ -14,15 +14,17 @@ function buscar(){
                 alert("Titulo não encontrado");
                 return;
             }
-            qtdBuscasRealizadas++
             
-
             //tratarErroUndefined(dados.Title);
             
             console.log("Titulo: ", dados.Title);
             console.log("Ano: ", dados.Year);
             console.log("Writer: ", dados.Writer);
 
-            tratarErro(dados.Title, dados.Year, dados.Writer);
+            tratarErroBusca(dados.Title, dados.Year, dados.Writer);
+
+            qtdBuscasRealizadas++
+            apresentarConsultasFeitas(qtdBuscasRealizadas);            
+
         })
 }
