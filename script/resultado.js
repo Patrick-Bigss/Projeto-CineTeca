@@ -9,11 +9,12 @@ function resultado(titulo, ano, escritor, poster){
 
     //alert(console.log(localStorage.key(i-1).nome));
 
-    inserirImagem(poster);    
     cardFilme.innerHTML = 
-        "<p><strong>Título:</strong> " + titulo + "</p>" +
-        "<p><strong>Ano:</strong> " + ano + "</p>" +
-        "<p><strong>Escritor:</strong> " + escritor + "</p>";
-    
+    "<p><strong>Título:</strong> " + titulo + "</p>" +
+    "<p><strong>Ano:</strong> " + ano + "</p>" +
+    "<p><strong>Escritor:</strong> " + escritor + "</p>";
+    //"<div id='imagem'></div>"
     sessaoLista.appendChild(cardFilme);
+
+    inserirImagem(poster);    
 }
