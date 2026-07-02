@@ -1,0 +1,18 @@
+function resultado(titulo, ano, escritor){
+    let sessaoLista = document.getElementById("lista-filmes");
+    let cardFilme = document.createElement("div");
+
+    cardFilme.style.border = "1px solid #ccc";
+    cardFilme.style.padding = "10px";
+    cardFilme.style.margin = "10px 0";
+    cardFilme.style.borderRadius = "5px";
+
+    //alert(console.log(localStorage.key(i-1).nome));
+
+    cardFilme.innerHTML = 
+        "<p><strong>Título:</strong> " + titulo + "</p>" +
+        "<p><strong>Ano:</strong> " + ano + "</p>" +
+        "<p><strong>Escritor:</strong> " + escritor + "</p>";
+    
+    sessaoLista.appendChild(cardFilme);
+}
