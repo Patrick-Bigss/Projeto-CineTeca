@@ -1,3 +1,5 @@
+let qtdBuscasRealizadas = 0
+
 function buscar(){
 
     let chave = "ae81a959";
@@ -12,6 +14,9 @@ function buscar(){
                 alert("Titulo não encontrado");
                 return;
             }
+            qtdBuscasRealizadas++
+            
+
             //tratarErroUndefined(dados.Title);
             
             console.log("Titulo: ", dados.Title);

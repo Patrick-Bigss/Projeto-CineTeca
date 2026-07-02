@@ -1,0 +1,3 @@
+function contarBuscasRealizadas(){
+    // a implementar
+}
