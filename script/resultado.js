@@ -1,5 +1,5 @@
 function resultado(titulo, ano, escritor, poster){
-    let sessaoLista = document.getElementById("lista-filmes");
+    let sessaoLista = document.getElementById("dadosfilmes");
     let cardFilme = document.createElement("div");
 
     cardFilme.style.border = "1px solid #ccc";
@@ -9,6 +9,8 @@ function resultado(titulo, ano, escritor, poster){
 
     //alert(console.log(localStorage.key(i-1).nome));
 
+    inserirImagem(poster);
+    
     cardFilme.innerHTML = 
     "<p><strong>Título:</strong> " + titulo + "</p>" +
     "<p><strong>Ano:</strong> " + ano + "</p>" +
@@ -16,5 +18,5 @@ function resultado(titulo, ano, escritor, poster){
     //"<div id='imagem'></div>"
     sessaoLista.appendChild(cardFilme);
 
-    inserirImagem(poster);    
+        
 }

@@ -7,7 +7,7 @@ function buscar(){
     let titulo = document.getElementById("titulo").value;
     let ano = document.getElementById("ano").value;
     
-    fetch(`http://www.omdbapi.com/?apikey=${chave}&t=${titulo}&y=${ano}`)
+    fetch(`https://www.omdbapi.com/?apikey=${chave}&t=${titulo}&y=${ano}`)
         .then(function(resposta){
             return resposta.json();            
         })
