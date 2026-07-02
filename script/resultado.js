@@ -16,6 +16,7 @@ function resultado(titulo, ano, escritor, poster){
     "<p><strong>Ano:</strong> " + ano + "</p>" +
     "<p><strong>Escritor:</strong> " + escritor + "</p>";
     //"<div id='imagem'></div>"
+
     sessaoLista.appendChild(cardFilme);
 
         
