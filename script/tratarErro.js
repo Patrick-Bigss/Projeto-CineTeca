@@ -6,7 +6,13 @@ function tratarErroBusca(titulo, ano, escritor, poster){
      try {
         if(titulo===undefined){
             alert("título nao encontrado")
-            throw new Error("Esse filme nao existe!")
+            throw new Error("Esse filme não existe!")
+
+        //Como escrever esse lançamento de erro?
+        elseif(poster==404){
+            alert("Filme sem imagem");
+            throw new Error("Esse filme não tem imagem!")
+        }
         }else{
             resultado(titulo, ano, escritor, poster);            
         }
