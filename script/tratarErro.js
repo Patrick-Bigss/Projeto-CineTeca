@@ -9,10 +9,10 @@ function tratarErroBusca(titulo, ano, escritor, poster){
             throw new Error("Esse filme não existe!")
 
         //Como escrever esse lançamento de erro?
-        elseif(poster==404){
-            alert("Filme sem imagem");
-            throw new Error("Esse filme não tem imagem!")
-        }
+        // elseif(poster==404){
+        //     alert("Filme sem imagem");
+        //     throw new Error("Esse filme não tem imagem!")
+        //}
         }else{
             resultado(titulo, ano, escritor, poster);            
         }
