@@ -1,21 +1,3 @@
- function buscarFilme() {
-
-    let titulo = document.getElementById("titulo").value;
-
-    if (titulo == "") {
-
-        alert("Digite o nome de um filme.");
-        return;
-
-    }
-
-    document.getElementById("nomeFilme").innerHTML ="";
-    document.getElementById("ano").innerHTML = "";
-    document.getElementById("diretor").innerHTML = "";
-    document.getElementById("sinopse").innerHTML = "";
-
-}
-
 // Salva a avaliação
 function salvarFilme() {
 
@@ -44,5 +26,3 @@ function salvarFilme() {
     localStorage.setItem("filmes", JSON.stringify(listaFilmes));
 
     alert("Avaliação salva com sucesso!");
-
-}
