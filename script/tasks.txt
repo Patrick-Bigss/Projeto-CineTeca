@@ -30,8 +30,4 @@ Estrutura de Páginas:
 1.Página de Busca (Pesquisa e exibição de resultados) e 
 2.Página de Avaliações (Exibição do catálogo pessoal do usuário).
 
-
-
-
 //let TituloTeste = "http://www.omdbapi.com/?apikey=ae81a959&t=Matrix"
-

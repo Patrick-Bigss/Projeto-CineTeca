@@ -5,7 +5,9 @@ function buscar(){
     let chave = "ae81a959";
 
     let titulo = document.getElementById("titulo").value;
-    fetch(`http://www.omdbapi.com/?apikey=${chave}&t=${titulo}`)
+    let ano = document.getElementById("ano").value;
+    
+    fetch(`http://www.omdbapi.com/?apikey=${chave}&t=${titulo}&y=${ano}`)
         .then(function(resposta){
             return resposta.json();            
         })
@@ -20,8 +22,11 @@ function buscar(){
             console.log("Titulo: ", dados.Title);
             console.log("Ano: ", dados.Year);
             console.log("Writer: ", dados.Writer);
+            console.log("Poster: ", dados.Poster);
 
-            tratarErroBusca(dados.Title, dados.Year, dados.Writer);
+            
+            tratarErroBusca(dados.Title, dados.Year, dados.Writer, dados.Poster);
+            
 
             qtdBuscasRealizadas++
             apresentarConsultasFeitas(qtdBuscasRealizadas);            
