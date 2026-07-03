@@ -1,89 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Cor de fundo da página */
 body{
-
-    font-family: Arial, Helvetica, sans-serif;
-
     background-color: #f4f4f4;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Cabeçalho */
 header{
-
-    background-color: #333;
-
+    background-color: #1f2937;
     color: white;
-
+    padding: 30px;
     text-align: center;
-
-    padding: 20px;
-
 }
 
+/* Menu */
 nav{
-
-    background-color: #555;
-
-    padding: 10px;
-
-    text-align: center;
-
-}
-
-nav a{
-
-    color: white;
-
-    text-decoration: none;
-
-    margin: 15px;
-
-}
-
-nav a:hover{
-
-    color: yellow;
-
-}
-
-main{
-
-    width: 80%;
-
-    margin: 30px auto;
-
-    background-color: white;
-
-    padding: 20px;
-
-    border-radius: 5px;
-
-}
-
-button{
-
     margin-top: 20px;
-
-    padding: 10px 20px;
-
-    cursor: pointer;
-
+    margin-bottom: 20px;
 }
 
+/* Links do menu */
+.nav-link{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: #ffc107;
+}
+
+/* Título */
+h1{
+    color: #ffc107;
+}
+
+/* Parágrafo principal */
+p{
+    font-size: 18px;
+}
+
+/* Caixa principal */
+.container{
+    margin-top: 20px;
+}
+
+/* Campo de pesquisa */
+.form-control{
+    border-radius: 8px;
+}
+
+/* Botões */
+.btn{
+    margin-top: 10px;
+}
+
+/* Cartões (caso utilize) */
+.card{
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Rodapé */
 footer{
-
-    text-align: center;
-
-    margin-top: 40px;
-
+    margin-top: 50px;
     padding: 15px;
-
-    background-color: #333;
-
+    background-color: #1f2937;
     color: white;
-
+    text-align: center;
 }
