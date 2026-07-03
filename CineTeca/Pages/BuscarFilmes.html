@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,8 +39,15 @@
             <div class="mb-3">
 
                 <label class="form-label" for="filme">Digite o nome do filme: </label>
+                <input type="text" class="form-control" id="titulo" placeholder="Ex.: Titanic">
 
-                <input type="text" class="form-control" id="filme" placeholder="Ex.: Titanic">
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label" for="ano">Digite o ano do filme: </label>
+
+                <input type="text" class="form-control" id="ano" placeholder="Ex.: 1997">
 
             </div>
 
@@ -58,13 +65,15 @@
 
                 <div class="card-body">
 
-                    <h4 id="tituloFilme">Nome do Filme</h4>
+                    <h4 id="nomeFilme">Nome do Filme</h4>
 
-                    <p id="ano">Ano: </p>
+                    <p id="anoResultado">Ano: </p>
 
                     <p id="diretor">Diretor: </p>
 
                     <p id="sinopse">Sinopse: </p>
+
+                    <img id="poster" class="img-thumbnail" width="250">
 
                     <button class="btn btn-success" onclick="adicionarFavorito()"> Adicionar aos Favoritos </button>
 
@@ -77,14 +86,11 @@
     </main>
 
     
-    <script src="../JS/Avaliacoes.js"> </script>
+    <script src="../JS/buscar.js"> </script>
     
-    <script src="../JS/BuscarFilme.js"> </script>
+    <!-- <script src"../JS/Avaliacoes.js"> </script>
 
-    <script src="../JS/resultado.js"> </script>
+    <script src="../JS/resultado.js"> </script> -->
 
-</body>
-
-</html>
 </body>
 </html>

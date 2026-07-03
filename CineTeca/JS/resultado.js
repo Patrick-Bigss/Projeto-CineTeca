@@ -1,6 +1,6 @@
 function resultado(titulo, ano, escritor, poster){
     let sessaoLista = document.getElementById("dadosfilmes");
-    let cardFilme = document.createElement("div");
+    // let cardFilme = document.createElement("div");
 
     cardFilme.style.border = "1px solid #ccc";
     cardFilme.style.padding = "10px";
