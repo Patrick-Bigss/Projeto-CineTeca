@@ -52,7 +52,7 @@ function buscarFilme(){
     });
 
             
-        tratarErroBusca(dados.Title, dados.Year, dados.Writer, dados.Poster);
+        //tratarErroBusca(dados.Title, dados.Year, dados.Writer, dados.Poster);
             
 
             qtdBuscasRealizadas++
