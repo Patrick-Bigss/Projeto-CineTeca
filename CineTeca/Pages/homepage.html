@@ -1,48 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início - CineTeca</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href= "https://previews.123rf.com/images/muslumstock/muslumstock1808/muslumstock180806405/107874508-video-camera-vector-icon-isolated-on-transparent-background-video-camera-logo-concept.jpg">
-       <link rel="stylesheet" href="../style.css">
+
+    <link rel="icon" type="image/x-icon"
+        href="https://previews.123rf.com/images/muslumstock/muslumstock1808/muslumstock180806405/107874508-video-camera-vector-icon-isolated-on-transparent-background-video-camera-logo-concept.jpg">
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
-       <!-- Topo do site-- -->
-        <main>
-            <header class="text-center py-1">
-        
-                <div class="container col-md-10">
+<body class="d-flex flex-column min-vh-100">
 
-                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="BuscarFilmes.html" class="nav-link px-2">Biblioteca de Filmes</a></li>
-                <li><a href="Avaliacoes.html" class="nav-link px-2">Avalie os Filmes</a></li>
+    <main class="flex-grow-1">
+
+        <header class="text-center py-4">
+
+            <div class="container col-md-10">
+
+                <ul class="nav justify-content-center mb-4">
+                    <li class="nav-item">
+                        <a href="BuscarFilmes.html" class="nav-link">Biblioteca de Filmes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Avaliacoes.html" class="nav-link">Avalie os Filmes</a>
+                    </li>
                 </ul>
 
-            <!-- <a href="BuscarFilmes.html" class="btn btn-primary  mt-3" >Começar Agora</a> - -->
-                
-               <h1 class="display-4"> Bem-vindo ao CineTeca</h1>
-                <p class="lead"> Pesquise filmes ou séries, descubra novas obras e registre suas avaliações.</p>
+                <h1 class="display-4">Bem-vindo ao CineTeca</h1>
+
+                <p class="lead">
+                    Pesquise filmes ou séries, descubra novas obras e registre suas avaliações.
+                </p>
+
                 <form>
-                        <label class="form-label" for="nome"> Digite o nome do filme:</label>
-                        <input class="form-control" type="text" id="nome" placeholder="Ex.: Titanic">  
 
-                        <button type="button" class="btn btn-primary mt-3" onclick="buscarFilme()">Buscar</button>
-                
-                    <script src="../JS/buscarFilme.js"></script>
-        
+                    <label class="form-label" for="titulo"> Digite o nome do filme:</label>
+
+                    <input class="form-control" type="text" id="titulo" placeholder="Ex.: Titanic">
+
+                    <br>
+
+                    <input class="form-control" type="text" id="titulo" placeholder="Ex.: 2000">
+
+                    <button type="button" class="btn btn-primary mt-3" onclick="buscarFilme()">
+
+                        Buscar
+
+                    </button>
+
                 </form>
-</div>
-</header>
-</main>
 
- <footer class="text-center mt-5">
+            </div>
 
-    <p>Projeto CineTeca - SENAI</p>
+        </header>
 
-</footer>
+        <!-- Carrossel -->
+
+        <section class="container mt-5">
+
+            <h2 class="text-center mb-4">
+                🎬 Filmes em Destaque
+            </h2>
+
+            <div id="carouselFilmes" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+
+                        <div class="d-flex justify-content-center gap-4 flex-wrap">
+                            <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" class="poster"
+                                alt="Interestelar">
+
+                            <img src="https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" class="poster"
+                                alt="Barbie">
+
+                            <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" class="poster"
+                                alt="Super Mario Bros.">
+
+                            <img src="https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg" class="poster"
+                                alt="Vingadores">
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <div class="d-flex justify-content-center gap-4 flex-wrap">
+
+                            <img src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg" class="poster"
+                                alt="Titanic">
+
+                            <img src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg" class="poster"
+                                alt="Avatar">
+
+                            <img src="https://image.tmdb.org/t/p/w500/8RW2runSEc34IwKN2D1aPcJd2UL.jpg" class="poster"
+                                alt="Batman Begins">
+
+                            <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" class="poster"
+                                alt="Duna">
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFilmes"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselFilmes"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-auto py-3">
+        <p>Projeto CineTeca - SENAI</p>
+    </footer>
+
+    <script src="../JS/buscarFilme.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

@@ -8,9 +8,7 @@ function mostrarAvaliacoes() {
 
 console.log(lista);
 
-    // let lista = document.getElementById("listaAvaliacoes");
-
-    // lista.innerHTML = "";
+    let lista = document.getElementById("listaAvaliacoes");
 
     if (favoritos.length == 0) {
 
@@ -51,16 +49,19 @@ console.log(lista);
 
 }
 
-function removerAvaliacao(){
+function removerAvaliacao(indice){
 
-    localStorage.removeItem("favoritos");
+    favoritos.splice(indice,1);
+
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
 
     mostrarAvaliacoes();
 
 }
 
-function editarAvaliacao(){
+function editarAvaliacao(indice){
 
-    alert("Função ainda não implementada.");
+    alert("Editar: " + favoritos[indice].titulo);
+
 
 }
