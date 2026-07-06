@@ -31,31 +31,11 @@ function buscarFilme(){
             console.log("Poster: ", dados.Poster);
 
             // Preenche os elementos da página
-        document.getElementById("nomeFilme").innerHTML = dados.Title;
-
-        document.getElementById("anoResultado").innerHTML =
-        "Ano: " + dados.Year;
-
-        document.getElementById("diretor").innerHTML =
-        "Diretor: " + dados.Director;
-
-        document.getElementById("sinopse").innerHTML =
-        "Sinopse: " + dados.Plot;
-
-        document.getElementById("poster").src =
-        dados.Poster;
-
-        qtdBuscasRealizadas++;
-
-        apresentarConsultasFeitas(qtdBuscasRealizadas);
+        
+        
+            tratarErroBusca(dados.Title, dados.Year, dados.Director, dados.Plot, dados.Poster);
+            qtdBuscasRealizadas++;
+            apresentarConsultasFeitas(qtdBuscasRealizadas);
 
     });
-
-            
-        //tratarErroBusca(dados.Title, dados.Year, dados.Writer, dados.Poster);
-            
-
-            qtdBuscasRealizadas++
-            apresentarConsultasFeitas(qtdBuscasRealizadas);            
-
-        }
+}

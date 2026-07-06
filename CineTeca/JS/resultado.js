@@ -1,4 +1,5 @@
-function resultado(titulo, ano, escritor, poster){
+function resultado(titulo, ano, diretor, sinopse, poster){
+    /*
     let sessaoLista = document.getElementById("dadosfilmes");
     // let cardFilme = document.createElement("div");
 
@@ -18,6 +19,20 @@ function resultado(titulo, ano, escritor, poster){
     //"<div id='imagem'></div>"
 
     sessaoLista.appendChild(cardFilme);
+    */
 
+    document.getElementById("nomeFilme").innerHTML = titulo;
+
+    document.getElementById("anoResultado").innerHTML =
+        "Ano: " + ano;
+
+    document.getElementById("diretor").innerHTML =
+        "Diretor: " + diretor;
+
+    document.getElementById("sinopse").innerHTML =
+        "Sinopse: " + sinopse;
+
+    document.getElementById("poster").src =
+        poster;
         
 }

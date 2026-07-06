@@ -1,5 +1,5 @@
 // Salva a avaliação
-function salvarFilme() {
+function salvarFilme(){
 
     let titulo = document.getElementById("nomeFilme").innerHTML;
     let nota = document.getElementById("nota").value;
@@ -26,3 +26,4 @@ function salvarFilme() {
     localStorage.setItem("filmes", JSON.stringify(listaFilmes));
 
     alert("Avaliação salva com sucesso!");
+}

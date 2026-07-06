@@ -1,4 +1,4 @@
-function tratarErroBusca(titulo, ano, escritor, poster){
+function tratarErroBusca(titulo, ano, diretor, sinopse, poster){
     /*
     Verifica se o título na busca está undefined, outros erros relacioandos
     a busca podem ser incorporados aqui
@@ -14,7 +14,8 @@ function tratarErroBusca(titulo, ano, escritor, poster){
         //     throw new Error("Esse filme não tem imagem!")
         //}
         }else{
-            resultado(titulo, ano, escritor, poster);            
+            resultado(titulo, ano, diretor, sinopse, poster);
+                   
         }
         
     } catch (error) {
