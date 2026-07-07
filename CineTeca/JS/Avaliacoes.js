@@ -1,7 +1,7 @@
-// Recupera os filmes salvos
+// Recupera os favoritos
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
-// Mostra os filmes na tela
+// Mostra os filmes
 mostrarAvaliacoes();
 
 function mostrarAvaliacoes() {
@@ -20,80 +20,103 @@ function mostrarAvaliacoes() {
 
     for (let i = 0; i < favoritos.length; i++) {
 
-        // Se ainda não existir nota, deixa como 1
-        if (favoritos[i].nota == undefined) {
 
-            favoritos[i].nota = "1";
-
-        }
 
         lista.innerHTML +=
 
-        "<div class='card mb-3'>" +
+            "<div class='card mb-3'>" +
 
             "<div class='card-body'>" +
 
-                "<h4>" + favoritos[i].titulo + "</h4>" +
+            "<h4>" + favoritos[i].titulo + "</h4>" +
 
-                "<p>" + favoritos[i].ano + "</p>" +
+            "<p>" + favoritos[i].ano + "</p>" +
 
-                "<p>" + favoritos[i].diretor + "</p>" +
+            "<p>" + favoritos[i].diretor + "</p>" +
 
-                "<img src='" + favoritos[i].poster + "' width='200'>" +
+            "<img src='" + favoritos[i].poster + "' width='200'>" +
 
-                "<br><br>" +
+            "<br><br>" +
 
-                "<label><strong>Sua nota:</strong></label>" +
+            "<label><strong>Sua nota:</strong></label>" +
 
-                "<select id='nota" + i + "' class='form-select'>" +
+            "<select id='nota" + i + "' class='form-select'>" +
 
-                    "<option value='1'" + (favoritos[i].nota == "1" ? " selected" : "") + ">⭐ 1</option>" +
+            "<option value='1'" + (favoritos[i].nota == "1" ? " selected" : "") + ">⭐ 1</option>" +
 
-                    "<option value='2'" + (favoritos[i].nota == "2" ? " selected" : "") + ">⭐⭐ 2</option>" +
+            "<option value='2'" + (favoritos[i].nota == "2" ? " selected" : "") + ">⭐⭐ 2</option>" +
 
-                    "<option value='3'" + (favoritos[i].nota == "3" ? " selected" : "") + ">⭐⭐⭐ 3</option>" +
+            "<option value='3'" + (favoritos[i].nota == "3" ? " selected" : "") + ">⭐⭐⭐ 3</option>" +
 
-                    "<option value='4'" + (favoritos[i].nota == "4" ? " selected" : "") + ">⭐⭐⭐⭐ 4</option>" +
+            "<option value='4'" + (favoritos[i].nota == "4" ? " selected" : "") + ">⭐⭐⭐⭐ 4</option>" +
 
-                    "<option value='5'" + (favoritos[i].nota == "5" ? " selected" : "") + ">⭐⭐⭐⭐⭐ 5</option>" +
+            "<option value='5'" + (favoritos[i].nota == "5" ? " selected" : "") + ">⭐⭐⭐⭐⭐ 5</option>" +
 
-                "</select>" +
+            "</select>" +
 
-                "<br>" +
+            "<br>" +
 
-                "<button class='btn btn-success' onclick='salvarNota(" + i + ")'>" +
-                "Salvar Nota" +
-                "</button>" +
+            "<label><strong>Sua resenha:</strong></label>" +
 
-                "<br><br>" +
+            "<textarea id='critica" + i + "' class='form-control'>" +
 
-                "<button class='btn btn-warning' onclick='editarAvaliacao(" + i + ")'>" +
-                "Editar" +
-                "</button> " +
+            (favoritos[i].critica || "") +
 
-                "<button class='btn btn-danger' onclick='removerAvaliacao(" + i + ")'>" +
-                "Excluir" +
-                "</button>" +
+            "</textarea>" +
+
+            "<br>" +
+
+            "<button class='btn btn-success' onclick='salvarAvaliacao(" + i + ")'>" +
+
+            "Salvar Avaliação" +
+
+            "</button>" +
+
+            "<br><br>" +
+
+            "<button class='btn btn-warning' onclick='editarAvaliacao(" + i + ")'>" +
+
+            "Editar" +
+
+            "</button> " +
+
+            "<button class='btn btn-danger' onclick='removerAvaliacao(" + i + ")'>" +
+
+            "Excluir" +
+
+            "</button>" +
 
             "</div>" +
 
-        "</div>";
+            "</div>";
 
     }
 
 }
 
-function salvarNota(indice) {
+function salvarAvaliacao(indice) {
 
     favoritos[indice].nota =
-    document.getElementById("nota" + indice).value;
+        document.getElementById("nota" + indice).value;
+
+    favoritos[indice].critica =
+        document.getElementById("critica" + indice).value;
+
+    // Ordena do maior para o menor
+    favoritos.sort(function (a, b) {
+
+        return b.nota - a.nota;
+
+    });
 
     localStorage.setItem(
         "favoritos",
         JSON.stringify(favoritos)
     );
 
-    alert("Nota salva com sucesso!");
+    alert("Avaliação salva com sucesso!");
+
+    mostrarAvaliacoes();
 
 }
 
@@ -118,6 +141,6 @@ function removerAvaliacao(indice) {
 
 function editarAvaliacao(indice) {
 
-    alert("Editar avaliação do filme: " + favoritos[indice].titulo);
+    alert("Edite a nota e a resenha do filme '" + favoritos[indice].titulo + "' e clique em 'Salvar Avaliação'.");
 
 }

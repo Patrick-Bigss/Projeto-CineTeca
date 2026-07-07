@@ -12,10 +12,16 @@ function adicionarFavorito(){
 
         sinopse: document.getElementById("sinopse").innerHTML,
 
-        poster: document.getElementById("poster").src
+        poster: document.getElementById("poster").src,
+    
+        crítica: "",
+
+        nota : "1"
 
     };
 
+    // verificando se o filme já esta favoritado
+    
     let existe = favoritos.some(function(item){
 
     return item.titulo == filme.titulo;
